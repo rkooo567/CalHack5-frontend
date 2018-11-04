@@ -10,17 +10,17 @@ class SearchPage extends Component {
     }
   }
 
-  changeResult(resultList) {
+  changeResult = (resultList) => {
     this.setState({
       searchResult: resultList
     })
   }
 
   render() {
-    alert(this.state.searchResult.length)
     return (
         <div>
             <SearchBar changeResult={this.changeResult}/>
+            <br />
             {this.state.searchResult.length > 0 && <SearchResult searchResult={this.state.searchResult}/>}
         </div>
     );

@@ -8,6 +8,7 @@ import "./SearchResultItem.css";
 
 const searchResultItem = (props) => {
   const imageURL = props.imageURL;
+  console.log(imageURL);
   const price = props.price;
   const quantity = props.quantity;
   const title = props.title;
@@ -19,6 +20,7 @@ const searchResultItem = (props) => {
           <img
             className='item-img'
             src={imageURL}
+            alt="nice try fool"
           />
         </div>
         <div className='media-body'>

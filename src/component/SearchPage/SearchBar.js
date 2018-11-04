@@ -18,25 +18,26 @@ class SearchBar extends Component {
   }
 
   search() {
-    const changeResult = this.props.changeResult;
     // get result from query
-    fetch(path.search + this.state.query)
+    fetch(path.search + this.state.query,{method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }})
       .then((res) => {
-        console.log(path.search + this.state.query)
+        // alert("cool"+"path"+path.search+this.state.query)
         return res.json();
       })
       .then((data) => {
-        console.log("haha")
-        changeResult(data);
+        // alert("ahaha"+"path"+path.search+this.state.query)
+        this.props.changeResult(data);
       })
-      .catch(error => {console.error("error occured")})
+      .catch(error => {alert("path"+path.search+this.state.query+error)})
     //changeResult(searchResult)
   }
 
   render() {
-    const changeResult = this.props.changeResult;
     return (
-      <Form inline className='forminline'>
+      <Form inline className='forminline' style={{marginLeft:"40%"}}>
           <FormGroup>
             <FormControl
               type="text"
@@ -47,7 +48,8 @@ class SearchBar extends Component {
               onKeyPress={
                 event => {
                   if (event.key === 'Enter'){
-                    this.search()
+                    event.preventDefault();
+                    this.search();
                   }
                 }
               }

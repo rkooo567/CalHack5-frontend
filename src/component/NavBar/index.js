@@ -4,7 +4,7 @@ import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 const NavBar = () => {
     return (
-        <Navbar leftpull inverse>
+        <Navbar inverse>
             <Nav>
                 <NavItem componentClass={Link} href="/" to="/">Requests</NavItem>
                 <NavItem componentClass={Link} href="/search" to="/search">Search</NavItem>

@@ -49,9 +49,8 @@ class LoginModal extends Component {
                 />
               </FormGroup>
             </Modal.Body>
-
             <Modal.Footer>
-              <Button onClick={(e) => {this.loginClicked(e)}}>Login</Button>
+              <Button onClick={(e) => this.loginClicked(e)} >Login</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </div>
