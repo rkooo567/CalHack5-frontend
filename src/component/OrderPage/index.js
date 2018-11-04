@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import OrderList from './OrderList'
 
 class OrderPage extends Component {
   render() {
     return (
-      <div>Order page</div>
+      <OrderList />
     );
   }
 }

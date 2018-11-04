@@ -13,8 +13,9 @@ class SearchResultItem extends React.Component {
     const price = this.props.price;
     const quantity = this.props.quantity;
     const title = this.props.title;
+    const id = this.props.id;
     return (
-        <ListGroupItem onClick={() => this.props.openItemModal({imageURL, price, quantity, title})}>
+        <ListGroupItem onClick={() => this.props.openItemModal({id, imageURL, price, quantity, title})}>
           <div className='video-item media'>
             <div className='media-left'>
               <img
