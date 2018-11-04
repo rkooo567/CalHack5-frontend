@@ -35,14 +35,16 @@ class LoginModal extends Component {
 
             <Modal.Body>
               <FormGroup>
+                <h4>Username</h4>
                 <FormControl
                   type="text"
-                  placeholder="Enter username"
+                  placeholder="username here"
                   onChange={(event) => this.onInputChange(event, "login")}
                   />
+                <h4>Password</h4>
                 <FormControl
                   type="password"
-                  placeholder="password"
+                  placeholder="password here"
                   onChange={(event) => this.onInputChange(event, "pass")}
                 />
               </FormGroup>
