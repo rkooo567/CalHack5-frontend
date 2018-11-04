@@ -52,7 +52,7 @@ class PostList extends Component {
         }); // For the key, use the unique ID.
 
         return (
-        <ListGroupItem>
+        <ListGroupItem style={{width: "50%",margin: "auto"}}>
             {postItems}
         </ListGroupItem>
         );

@@ -13,7 +13,7 @@ class LoginModal extends Component {
   }
 
   onInputChange(event, type) {
-    if (type == "login") {
+    if (type === "login") {
       this.setState({login: event.target.value});
     } else {
       this.setState({pass: event.target.value});
