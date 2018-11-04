@@ -41,7 +41,7 @@ class LoginModal extends Component {
                   onChange={(event) => this.onInputChange(event, "login")}
                   />
                 <FormControl
-                  type="text"
+                  type="password"
                   placeholder="password"
                   onChange={(event) => this.onInputChange(event, "pass")}
                 />

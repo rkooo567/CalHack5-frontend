@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroupItem } from 'react-bootstrap';
 
 class RequestList extends Component {
     constructor(props) {
@@ -54,9 +54,9 @@ getHardCodedResult() {
         }); // For the key, use the unique ID.
 
         return (
-        <ul className="col-md-4 list-group">
+        <ListGroupItem>
             {requestItems}
-        </ul>
+        </ListGroupItem>
         );
     }
 }

@@ -5,7 +5,7 @@ import LoginModal from '../LoginModal/index';
 class RequestsPage extends Component {
   render() {
     return (
-      <div>Request Page {getUser()}</div>
+      <div>Request Page </div>
     );
   }
 }
