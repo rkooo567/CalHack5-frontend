@@ -22,7 +22,8 @@ class SearchBar extends Component {
     // get result from query
     fetch(path.search + this.state.query)
       .then((res) => {
-        res.json();
+        console.log(path.search + this.state.query)
+        return res.json();
       })
       .then((data) => {
         console.log(data);
@@ -34,7 +35,7 @@ class SearchBar extends Component {
   render() {
     const changeResult = this.props.changeResult;
     return (
-      <Form inline>
+      <Form inline className='forminline'>
           <FormGroup>
             <FormControl
               type="text"
