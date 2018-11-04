@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ListGroupItem } from 'react-bootstrap';
-import RequestItem from './RequestItem';
+import PostItem from './PostItem';
 
-class RequestList extends Component {
+class PostList extends Component {
     constructor(props) {
         super(props);
         let appleImage = "https://cdn.vox-cdn.com/thumbor/-bKrYahnwqww9sH9v2h34v9ViA0=/0x114:585x559/1200x800/filters:focal(248x297:340x389)/cdn.vox-cdn.com/uploads/chorus_image/image/57272301/Screen_Shot_2017_10_23_at_10.16.32_AM.0.png";
@@ -37,14 +37,14 @@ class RequestList extends Component {
 // List of search items
     render() {
         let i = 0;
-        const requestItems = this.state.result.map(
-        (requestItem) => {
+        const postItems = this.state.result.map(
+        (postItem) => {
             return (
-            <RequestItem
-                imageURL={requestItem.img}
-                name={requestItem.name}
-                total_required={requestItem.total_required}
-                upvote={requestItem.upvote}
+            <PostItem
+                imageURL={postItem.img}
+                name={postItem.name}
+                total_required={postItem.total_required}
+                upvote={postItem.upvote}
                 key={i}
             />
             );
@@ -53,10 +53,10 @@ class RequestList extends Component {
 
         return (
         <ListGroupItem>
-            {requestItems}
+            {postItems}
         </ListGroupItem>
         );
     }
 }
 
-export default RequestList;
+export default PostList;

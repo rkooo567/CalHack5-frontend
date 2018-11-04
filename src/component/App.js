@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Router, Route, Switch} from "react-router-dom";
 import history from "../history";
-import RequestsPage from "./RequestsPage/index";
+import PostPage from "./PostPage/index";
 import SearchPage from "./SearchPage/index";
 import OrderPage from "./OrderPage/index";
 import NavBar from "./NavBar/index";
@@ -16,7 +16,7 @@ class App extends Component {
             <div>
                 <NavBar />
                 <Switch>
-                    <Route path="/requests" component={RequestsPage} />
+                    <Route path="/post" component={PostPage} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/order" component={OrderPage} />
                     <Route path="/" component={LoginModal} />

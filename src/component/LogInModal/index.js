@@ -22,7 +22,7 @@ class LoginModal extends Component {
 
   loginClicked(event) {
     setUser(this.state.login);
-    history.push("/requests")
+    history.push("/post")
   }
 
   render() {

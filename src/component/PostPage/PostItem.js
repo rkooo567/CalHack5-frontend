@@ -1,8 +1,8 @@
 import React from 'react';
 import {ListGroupItem} from 'react-bootstrap';
-import "./RequestItem.css";
+import "./PostItem.css";
 
-const RequestItem = (props) => {
+const PostItem = (props) => {
   const imageURL = props.imageURL;
   const name = props.name;
   const total_required = props.total_required;
@@ -33,4 +33,4 @@ const RequestItem = (props) => {
   );
 }
 
-export default RequestItem;
+export default PostItem;
