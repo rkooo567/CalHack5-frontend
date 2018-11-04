@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { USER } from '../../globals';
-import LoginModal from '../LoginModal';
+import LoginModal from '../LoginModal/index';
 
 class RequestsPage extends Component {
   render() {

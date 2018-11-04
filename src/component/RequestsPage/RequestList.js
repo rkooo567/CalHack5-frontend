@@ -45,12 +45,13 @@ getHardCodedResult() {
   const total_required = props.total_required;
   const upvote = props.upvote;
         const requestItems = this.state.result.map(
-        (video) => {
+        (requestItem) => {
             return (
             <RequestItem
-                onVideoClick={selectedVideo => this.props.onVideoSelect(selectedVideo)}
-                key={video.etag}
-                video={video}
+                imageURL={requestItem.imageURL}
+                name={requestItem.name}
+                total_required={requestItem.total_required}
+                upvot={requestItem.upvote}
             />
             );
         }); // For the key, use the unique ID.

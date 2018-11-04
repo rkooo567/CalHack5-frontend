@@ -5,8 +5,8 @@ import RequestsPage from "./RequestsPage/index";
 import SearchPage from "./SearchPage/index";
 import OrderPage from "./OrderPage/index";
 import NavBar from "./NavBar/index";
+import LoginModal from "./LoginModal/index";
 import './App.css';
-
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
                     <Route path="/requests" component={RequestsPage} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/order" component={OrderPage} />
-                    <Route path="/" component={RequestsPage} />
+                    <Route path="/" component={LoginModal} />
                 </Switch>
             </div>
         </Router>

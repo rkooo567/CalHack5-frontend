@@ -1,1 +1,1 @@
-export let USER = "";
+export var USER = "";
