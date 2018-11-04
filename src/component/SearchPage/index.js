@@ -17,10 +17,11 @@ class SearchPage extends Component {
   }
 
   render() {
+    alert(this.state.searchResult.length)
     return (
         <div>
             <SearchBar changeResult={this.changeResult}/>
-            <SearchResult searchResult={this.state.searchResult}/>
+            {this.state.searchResult.length > 0 && <SearchResult searchResult={this.state.searchResult}/>}
         </div>
     );
   }

@@ -26,7 +26,8 @@ class SearchBar extends Component {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log("haha")
+        changeResult(data);
       })
       .catch(error => {console.error("error occured")})
     //changeResult(searchResult)
