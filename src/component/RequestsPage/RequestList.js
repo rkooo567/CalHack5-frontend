@@ -51,7 +51,7 @@ getHardCodedResult() {
                 imageURL={requestItem.imageURL}
                 name={requestItem.name}
                 total_required={requestItem.total_required}
-                upvot={requestItem.upvote}
+                upvote={requestItem.upvote}
             />
             );
         }); // For the key, use the unique ID.
