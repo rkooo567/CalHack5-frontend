@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Button, FormControl, FormGroup, Modal} from 'react-bootstrap';
-import { USER } from '../../globals';
+import { getUser, setUser } from '../../globals';
 import history from "../../history";
 
 class LoginModal extends Component {
@@ -21,7 +21,8 @@ class LoginModal extends Component {
   }
 
   loginClicked(event) {
-    
+    setUser(this.state.login);
+    history.push("/requests")
   }
 
   render() {
@@ -48,7 +49,7 @@ class LoginModal extends Component {
             </Modal.Body>
 
             <Modal.Footer>
-              <Button onClick={() => {history.push("/requests")}}>Login</Button>
+              <Button onClick={(e) => {this.loginClicked(e)}}>Login</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </div>

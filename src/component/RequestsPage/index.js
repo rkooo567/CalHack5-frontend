@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import { USER } from '../../globals';
+import { getUser } from '../../globals';
 import LoginModal from '../LoginModal/index';
 
 class RequestsPage extends Component {
   render() {
-    if (USER.trim() === ""){
-      return (
-        <LoginModal />
-      )
-    }
     return (
-      <div>Request Page</div>
+      <div>Request Page {getUser()}</div>
     );
   }
 }
