@@ -1,8 +1,9 @@
 import React from 'react';
 import {ListGroupItem} from 'react-bootstrap';
+import "./RequestItem.css";
 
 const RequestItem = (props) => {
-  const imageURL = props.image;
+  const imageURL = props.imageURL;
   const name = props.name;
   const total_required = props.total_required;
   const upvote = props.upvote;
@@ -12,20 +13,19 @@ const RequestItem = (props) => {
       <div className='video-item media'>
         <div className='media-left'>
           <img
-            className='media-object'
+            className='item-img'
             src={imageURL}
-            art='video-picture'
           />
         </div>
         <div className='media-body'>
           <div className='media-heading'>
-            {name}
+            name: {name}
           </div>
            <div className='media-heading'>
-            {total_required}
+            total_amount: {total_required}
           </div>
            <div className='media-heading'>
-            {upvote}
+            ordered: {upvote}
           </div>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { getUser } from '../../globals';
-import LoginModal from '../LoginModal/index';
+import RequestList from './RequestList';
 
 class RequestsPage extends Component {
   render() {
     return (
-      <div>Request Page </div>
+      <div>
+        <RequestList />
+      </div>
     );
   }
 }
