@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, FieldGroup, Modal} from 'react-bootstrap';
+import {Button, FormControl, FormGroup Modal} from 'react-bootstrap';
 
 class LoginModal extends Component {
   render() {
@@ -11,20 +11,16 @@ class LoginModal extends Component {
             </Modal.Header>
 
             <Modal.Body>
-              <form>
-                <FieldGroup
-                  id="username"
+              <FormGroup>
+                <FormControl
                   type="text"
-                  label="username"
                   placeholder="Enter username"
                 />
-                <FieldGroup
-                  id="password"
+                <FormControl
                   type="text"
-                  label="password"
                   placeholder="password"
                 />
-              </form>
+              </FormGroup>
             </Modal.Body>
 
             <Modal.Footer>
