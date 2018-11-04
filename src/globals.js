@@ -1,6 +1,7 @@
 var USER = "";
 const host = "http://1a7e2489.ngrok.io"
-export const path = {
+
+const path = {
     search: host + "/search?q="
 }
 
@@ -12,4 +13,4 @@ const setUser = (username) => {
     USER = username;
 }
 
-export {getUser, setUser};
+export {getUser, setUser, host, path};
