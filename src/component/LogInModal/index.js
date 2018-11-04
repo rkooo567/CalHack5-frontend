@@ -27,7 +27,7 @@ class LoginModal extends Component {
 
   render() {
     return (
-        <div className="static-modal">
+        <div className="login-modal">
           <Modal.Dialog>
             <Modal.Header>
               <Modal.Title>Login</Modal.Title>

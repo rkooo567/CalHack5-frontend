@@ -6,37 +6,45 @@ import React from 'react';
 import {ListGroupItem} from 'react-bootstrap';
 import "./SearchResultItem.css";
 
-const searchResultItem = (props) => {
-  const imageURL = props.imageURL;
-  console.log(imageURL);
-  const price = props.price;
-  const quantity = props.quantity;
-  const title = props.title;
+class SearchResultItem extends React.Component {
 
-  return (
-    <ListGroupItem onClick={() => alert("d")}>
-      <div className='video-item media'>
-        <div className='media-left'>
-          <img
-            className='item-img'
-            src={imageURL}
-            alt="nice try fool"
-          />
-        </div>
-        <div className='media-body'>
-          <div className='media-heading'>
-            price: {price}
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    }
+  }
+
+  render() {
+    const imageURL = this.props.imageURL;
+    const price = this.props.price;
+    const quantity = this.props.quantity;
+    const title = this.props.title;
+    return (
+        <ListGroupItem onClick={() => this.setState({showModal: !this.state.showModal})}>
+          <div className='video-item media'>
+            <div className='media-left'>
+              <img
+                className='item-img'
+                src={imageURL}
+                alt="oops nothing"
+              />
+            </div>
+            <div className='media-body'>
+              <div className='media-heading'>
+                price: {price}
+              </div>
+              <div className='media-heading'>
+                quantity: {quantity}
+              </div>
+              <div className='media-heading'>
+                title: {title}
+              </div>
+            </div>
           </div>
-           <div className='media-heading'>
-            quantity: {quantity}
-          </div>
-           <div className='media-heading'>
-            title: {title}
-          </div>
-        </div>
-      </div>
-    </ListGroupItem>
-  );
+        </ListGroupItem>
+      );
+  }
 }
 
 export default searchResultItem;

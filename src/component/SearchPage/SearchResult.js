@@ -10,6 +10,9 @@ class SearchResult extends Component {
         }
     }
     
+    openItemModal = () => {
+        
+    }
 // List of search items
     render() {
         const searchResults = this.props.searchResult.map(
