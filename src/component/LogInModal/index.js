@@ -32,7 +32,6 @@ class LoginModal extends Component {
             <Modal.Header>
               <Modal.Title>Login</Modal.Title>
             </Modal.Header>
-
             <Modal.Body>
               <FormGroup>
                 <h4>Username</h4>

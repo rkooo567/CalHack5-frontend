@@ -8,20 +8,13 @@ import "./SearchResultItem.css";
 
 class SearchResultItem extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: false
-    }
-  }
-
   render() {
     const imageURL = this.props.imageURL;
     const price = this.props.price;
     const quantity = this.props.quantity;
     const title = this.props.title;
     return (
-        <ListGroupItem onClick={() => this.setState({showModal: !this.state.showModal})}>
+        <ListGroupItem onClick={() => this.props.openItemModal({imageURL, price, quantity, title})}>
           <div className='video-item media'>
             <div className='media-left'>
               <img
@@ -47,4 +40,4 @@ class SearchResultItem extends React.Component {
   }
 }
 
-export default searchResultItem;
+export default SearchResultItem;
