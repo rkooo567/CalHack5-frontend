@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Button, FormControl, FormGroup, Modal} from 'react-bootstrap';
-import { getUser, setUser } from '../../globals';
+import {getUser, setUser, host} from '../../globals';
 import history from "../../history";
 
 class LoginModal extends Component {
@@ -20,9 +20,29 @@ class LoginModal extends Component {
     }
   }
 
-  loginClicked(event) {
-    setUser(this.state.login);
-    history.push("/post")
+  postData = (url = ``, data = {}) => {
+    // Default options are marked with *
+      return fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, cors, *same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          headers: {
+              "Content-Type": "application/json; charset=utf-8",
+          },
+          redirect: "follow", // manual, *follow, error
+          referrer: "no-referrer", // no-referrer, *client
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+      })
+      .then(response => response.json()); // parses response to JSON
+  }
+
+  loginClicked = (event) => {
+    this.postData(host+"/signup", {username: this.state.login})
+    .then(data => {
+      setUser(this.state.login);
+      history.push("/post");
+    }) // JSON-string from `response.json()` call
+    .catch(error => alert("database login error"+error));
   }
 
   render() {

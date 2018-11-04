@@ -16,9 +16,7 @@ class SearchResult extends Component {
     }
     
     openItemModal = (obj) => {
-        this.setState({showModal: true, modalInfo: obj}, () => {
-            // alert(JSON.stringify(this.state.modalInfo));
-        });
+        this.setState({showModal: true, modalInfo: obj});
     }
 
     handleModalShow = () => {
@@ -72,6 +70,7 @@ class SearchResult extends Component {
                 price={searchResult.price}
                 quantity={searchResult.quantity}
                 title={searchResult.title}
+                id={searchResult.id}
                 key={i}
                 openItemModal={this.openItemModal}
             />

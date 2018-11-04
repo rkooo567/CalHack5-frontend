@@ -13,4 +13,4 @@ const setUser = (username) => {
     USER = username;
 }
 
-export {getUser, setUser};
+export {getUser, setUser, host, path};
