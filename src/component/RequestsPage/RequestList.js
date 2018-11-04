@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ListGroupItem } from 'react-bootstrap';
 
 class RequestList extends Component {
     constructor(props) {
@@ -40,10 +41,6 @@ getHardCodedResult() {
 // List of search items
     render() {
         this.getHardCodedResult();
-          const imageURL = props.image;
-  const name = props.name;
-  const total_required = props.total_required;
-  const upvote = props.upvote;
         const requestItems = this.state.result.map(
         (requestItem) => {
             return (
@@ -57,9 +54,9 @@ getHardCodedResult() {
         }); // For the key, use the unique ID.
 
         return (
-        <ul className="col-md-4 list-group">
-            {videoItems}
-        </ul>
+        <ListGroupItem>
+            {requestItems}
+        </ListGroupItem>
         );
     }
 }

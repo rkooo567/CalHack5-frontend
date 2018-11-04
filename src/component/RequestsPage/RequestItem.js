@@ -1,4 +1,5 @@
 import React from 'react';
+import {ListGroupItem} from 'react-bootstrap';
 
 const RequestItem = (props) => {
   const imageURL = props.image;
@@ -7,7 +8,7 @@ const RequestItem = (props) => {
   const upvote = props.upvote;
 
   return (
-    <li onClick={() => alert("d")}>
+    <ListGroupItem onClick={() => alert("d")}>
       <div className='video-item media'>
         <div className='media-left'>
           <img
@@ -28,7 +29,7 @@ const RequestItem = (props) => {
           </div>
         </div>
       </div>
-    </li>
+    </ListGroupItem>
   );
 }
 
