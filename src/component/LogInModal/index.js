@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Button, FormControl, FormGroup, Modal} from 'react-bootstrap';
 import { USER } from '../../globals';
 import history from "../../history";
+
 class LoginModal extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +48,7 @@ class LoginModal extends Component {
             </Modal.Body>
 
             <Modal.Footer>
-              <Button onClick={(e) => {this.loginClicked(e);}}>Login</Button>
+              <Button onClick={() => {history.push("/requests")}}>Login</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </div>
